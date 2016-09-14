@@ -1,7 +1,7 @@
 import React, {PropTypes} from 'react'
 import Todo from './Todo'
 
-const TodoList = ({todos}) => {
+const TodoList = ({todos}) => (
   <ul>
     {todos.map((todo) =>
       <Todo
@@ -10,10 +10,10 @@ const TodoList = ({todos}) => {
       />
     )}
   </ul>
-}
+)
 
 TodoList.propTypes = {
-  todos: propTypes.arrayOf(PropTypes.shape({
+  todos: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.number.isRequired,
     text: PropTypes.string.isRequired
   }).isRequired).isRequired

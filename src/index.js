@@ -8,10 +8,6 @@ import App from './components/App'
 import {addTodo} from './actions'
 
 let store = createStore(todo)
-// store.dispatch(addTodo('Hello World'))
-// console.log(store.getState())
-// store.dispatch(addTodo('React js'))
-// console.log(store.getState())
 
 store.dispatch(addTodo('Hello React!'))
 store.dispatch(addTodo('Hello Redux!'))

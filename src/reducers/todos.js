@@ -1,6 +1,4 @@
 const todo = (state, action) => {
-  console.log(state)
-  // console.log(action)
   switch (action.type) {
     case 'ADD_TODO':
       return {
@@ -20,7 +18,7 @@ const todos = (state = [], action) => {
         todo(undefined, action)
       ]
     default:
-    return state
+      return state
   }
 }
 
