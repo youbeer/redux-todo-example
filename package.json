@@ -1,11 +1,11 @@
 {
-  "name": "redux_todos3",
+  "name": "redux-todo-example",
   "version": "1.0.0",
   "description": "redux todo list example",
   "main": "index.js",
   "scripts": {
     "build": "webpack --progress",
-    "start": "webpack-dev-server --watch",
+    "start": "webpack-dev-server --inline--hot",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
