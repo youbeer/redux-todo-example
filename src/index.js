@@ -6,7 +6,7 @@ import createLogger from 'redux-logger'
 import todo from './reducers'
 import App from './components/App'
 
-import {addTodo, toggleTodo} from './actions'
+import {addTodo, toggleTodo, setVisibilityFilter} from './actions'
 
 const logger = createLogger()
 const store = createStore(
@@ -14,9 +14,17 @@ const store = createStore(
   applyMiddleware(logger)
 )
 
+// const store = createStore(todo)
+
+// console.log(store.getState())
+// store.dispatch(setVisibilityFilter('SHOW_COMPLETED'))
+// console.log(store.getState())
 
 store.dispatch(addTodo('Hello React!'))
+// store.dispatch(toggleTodo(0))
 store.dispatch(addTodo('Hello Redux!'))
+
+// store.dispatch(setVisibilityFilter('SHOW_ALL'))
 
 render(
   <Provider store={store}>
